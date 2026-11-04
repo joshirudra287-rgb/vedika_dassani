@@ -1,0 +1,10 @@
+export { heroConfig } from './hero';
+export { birthdayConfig } from './birthday';
+export { questionsConfig } from './questions';
+export { memoriesConfig } from './memories';
+export { timelineConfig } from './timeline';
+export { reasonsConfig } from './reasons';
+export { lettersConfig } from './letters';
+export { musicConfig } from './music';
+export { surprisesConfig } from './surprises';
+export { endingConfig } from './ending';
