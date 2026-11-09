@@ -1,19 +1,19 @@
 // Content Configuration: Hero Section
 export const heroConfig = {
   // Recipient name and nicknames
-  recipientName: "My Beautiful Angel",
+  recipientName: "Love of My Lyf",
   nickname: "Sweetheart",
 
   // Main banner text
   badgeText: "A Celebration Of The Most Wonderful Soul",
   titlePart1: "Happy Birthday,",
-  titlePart2: "My Entire Universe",
+  titlePart2: "My Gummy Bear",
 
   // Romantic subtitle / dedication
-  subtitle: "To the woman who turned ordinary days into poetry, filled my heart with a quiet certainty, and made loving you the easiest and sweetest thing I've ever known.",
+  subtitle: "To the woman who made me the man I am today, who taught me how to carry myself with grace, how to love without fear, and who gently showed me how easy love can be when it's real: you are the reason my heart beat again, and the reason I believe in love once more.",
 
   // Explore button label
-  ctaButtonText: "Unwrap Your Surprise",
+  ctaButtonText: "Click if u want to know more abt my feelings",
 
   // Background image (use local path like '/images/hero-bg.jpg' or external URL)
   backgroundImage: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=2000&q=80",

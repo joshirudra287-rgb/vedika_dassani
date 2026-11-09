@@ -1,20 +1,19 @@
 // Content Configuration: Birthday Introduction Section
 export const birthdayConfig = {
-  sectionTag: "A Love Letter For Today",
-  heading: "Every Year, You Become More Enchanting",
-  leadParagraph: "Today is not just another date on the calendar; it is the day the world was blessed with your radiant light, your infectious laugh, and the kindest heart I have ever had the honor to know.",
+  sectionTag: "Kuch Sabad tere liye",
+  heading: "One lifetime wouldn't be enough to celebrate this day with you",
+  leadParagraph: "Today is not just another date on the calendar; it is the day the world was blessed with your radiant light, your infectious laugh, and the kindest heart I have ever had the honor to know. Kuchu yeh sirf ek din nhi h mere liye, yeh mere liye sbse bda festival h...I wish ki m hrr saal tere saath tera bday mna paau or hm dono khush reh hmesha",
 
   // Personal paragraphs - can have as many paragraphs as desired
   paragraphs: [
-    "From the very first moment our eyes met, you shifted something in the fabric of my life. You brought a gentle calm to my chaos and a spark of joy that makes even the most mundane morning coffee taste like a quiet miracle.",
-    "Watching you grow, dream, conquer challenges, and love so fiercely has been the greatest privilege of my life. You hold the grace of an old soul and the luminous curiosity of a blooming flower.",
-    "On this special birthday, my only wish is for you to see yourself through my eyes — just for a single second — so you could truly understand how breathtaking, how irreplaceable, and how deeply cherished you are.",
-    "Here is to another trip around the sun, hand in hand, chasing sunsets, whispering silly jokes at 2 AM, and writing a story that only gets richer with every passing chapter."
+    "Poshu lots of love to u🫀..Ik m bhot jyada tumhe annoy krta hu or irritate bhi bhot krta hu..but i swear i love u alot and tbh mujhe itna pyaar krta aata bhi ni h...jitna m tumse kr baitha hu...thnku mere saare emotions m mere saath rhne k liye.....",
+    "Happpiest bday to u my lyf....i wish sirf y din nhi hm dono saath m zindagi ka hrr din celebrate kre and hrr vo sapne pure kre jo hm dono ne dekhe h, chahe h ya soche h, ik hmesha khush rhna possible nhi h but mera sbse acha din ho ya sbse pura din i want that day to end up in ur arms only......",
+    "Maine jitna bhi preshn kia h tumko uske liye maafi.....hum sb thk krlenge.....and will make our new world 🫀"
   ],
 
   // Signature area
   signatureGreeting: "Forever and always yours,",
-  senderName: "Your Boyfriend & Biggest Fan ❤️",
+  senderName: "Your dodo and biggest fan ❤️",
 
   // Highlight metrics or sweet stats
   stats: [

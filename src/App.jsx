@@ -9,7 +9,6 @@ import { JourneyTimeline } from './sections/JourneyTimeline';
 import { ReasonsLove } from './sections/ReasonsLove';
 import { OpenWhenLetters } from './sections/OpenWhenLetters';
 import { MusicPlayer } from './sections/MusicPlayer';
-import { BirthdayCountdown } from './sections/BirthdayCountdown';
 import { SecretSurprise } from './sections/SecretSurprise';
 import { FinalEnding } from './sections/FinalEnding';
 import { musicConfig } from './data/music';
@@ -65,10 +64,7 @@ export function App() {
           setCurrentTrack={setCurrentTrack}
         />
 
-        {/* Section 9: Birthday Countdown */}
-        <BirthdayCountdown />
-
-        {/* Section 10: Secret Surprise */}
+        {/* Section 9: Secret Surprise */}
         <SecretSurprise />
 
         {/* Section 11: Final Ending */}
