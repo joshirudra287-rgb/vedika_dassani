@@ -24,6 +24,6 @@ export const birthdayConfig = {
   ],
 
   // Side portrait or decorative featured image
-  featuredImage: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=80",
+  featuredImage: "/images/vedika-childhood.jpg",
   imageCaption: "The sweetest smile that illuminates my entire world ✨"
 };

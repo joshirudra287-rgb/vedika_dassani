@@ -46,11 +46,14 @@ export const JourneyTimeline = () => {
                     isEven ? 'md:text-left' : 'md:text-left'
                   }`}>
                     {/* Date Tag */}
-                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-romantic-950/80 border border-romantic-500/30 text-romantic-300 text-xs font-medium uppercase tracking-wider mb-3">
-                      <Calendar className="w-3 h-3 text-gold" />
-                      <span>{entry.date}</span>
-                      {entry.tag && <span className="text-romantic-400/80">• {entry.tag}</span>}
-                    </div>
+                    {(entry.date || entry.tag) && (
+                      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-romantic-950/80 border border-romantic-500/30 text-romantic-300 text-xs font-medium uppercase tracking-wider mb-3">
+                        {entry.date && <Calendar className="w-3 h-3 text-gold" />}
+                        {entry.date && <span>{entry.date}</span>}
+                        {entry.date && entry.tag && <span className="text-romantic-400/80">•</span>}
+                        {entry.tag && <span>{entry.tag}</span>}
+                      </div>
+                    )}
 
                     <h3 className="text-xl sm:text-2xl font-serif font-bold text-white mb-2">
                       {entry.title}

@@ -75,7 +75,7 @@ export const FinalEnding = ({ onScrollToTop }) => {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="glass-card rounded-3xl p-8 sm:p-14 border border-romantic-400/25 shadow-2xl text-center mb-16 max-w-3xl mx-auto"
       >
-        <div className="space-y-6 text-champagne-100/90 font-light text-base sm:text-lg leading-relaxed font-serif">
+        <div className="space-y-6 text-champagne-100/90 font-light text-base sm:text-lg leading-relaxed font-serif whitespace-pre-line text-left sm:text-center">
           {endingConfig.closingMessage.map((p, idx) => (
             <p key={idx}>{p}</p>
           ))}

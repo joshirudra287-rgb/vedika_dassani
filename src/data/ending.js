@@ -6,9 +6,10 @@ export const endingConfig = {
 
   // Personal heartfelt closing letter/message
   closingMessage: [
-    "As you blow out your candles today, know that my biggest wish has already come true: having you in my life, laughing with me, holding my hand, and sharing this wild, magnificent journey.",
-    "May this upcoming year shower you with boundless adventures, triumphant successes, sweet quiet mornings, and a love that wraps around you like the warmest blanket.",
-    "No matter where life takes us, I will always be right here by your side — your biggest cheerleader, your truest confidant, and the one whose heart beats only for you."
+    "Kaise btau ki tu kya h mere liye?\nTu h to m hu\ntu h to mera sb kuch h\nTu mere liye sangeet h mera\nTu mere liye mera sb kuch h\nTu jb muskurati h to mujhe meri andhere si dunia m roshni dikhne lgti h\nTu jb baaho m thaam ti h mujhe to vo halla jisse m bchpn se bhagta aaya hu...vo shnt hota dikhta h...",
+    "Itna sukoon? Itna sukoon khi kaise mil skta h yrr vedu....Idk kaise hua? kb hua? kyu hua? bss itna pta h jitna bhi hua h ab sb tumse hogya h...I love u very much Vedika Dassani....Idk kaise itni asani se tum mere itne kareeb hogye ho ki ab tumko alg krne ka soch bhi ni skta....itne jyada important hogye ho ki m jo bhi sochta hu hmara sochta hu...apna mujhe kuch sujta ni h....I wish hm jld hi ek saath bhi rhne lg jaaye....",
+    "vedika ik hm dono m clashes bhot hote h....but i wish hm kbhi unhe itna na bdne de ki hm dono k pyaar pe vo clashes bhari pde....ik u r very jolly in nature and yet so loving too....but m tumhe bhot jokes pe rok deta hu....I wish m aapko smza pau  aapse dur jaane vaali koi baat mujhe mjaak m bhi ni sunni.....",
+    "Baaki vedika i'm all urs and alwys urs....and will be urs for the lyf.....M hmesha tera hi bnke rhna chata hu....marne k baad tk.....sirf tera rhna h mujhe......Thnku for changing my boring fucking lyf into a Biggest Carnival ofc without rides😭...Sry and thnku for everythng my love🫀"
   ],
 
   // Final special portrait or couple picture
@@ -32,7 +33,7 @@ export const endingConfig = {
 
   // Closing Sign-Off
   signature: "With All My Love & Devotion,",
-  signOffName: "Forever Yours ❤️",
+  signOffName: "Forever Yours  👾🫀",
 
   // Bottom action buttons
   backToTopText: "Relive Our Surprise From The Top ↑",

@@ -81,18 +81,22 @@ export const MemoriesGallery = () => {
                       <p className="font-cursive text-xl text-romantic-600 mt-1 leading-snug">
                         {item.caption}
                       </p>
-                      <div className="flex items-center justify-between text-[11px] text-gray-500 mt-3 pt-2 border-t border-gray-100 font-sans uppercase tracking-wider">
-                        <span className="flex items-center gap-1">
-                          <Calendar className="w-3 h-3 text-romantic-500" />
-                          {item.date}
-                        </span>
-                        {item.location && (
-                          <span className="flex items-center gap-1">
-                            <MapPin className="w-3 h-3 text-romantic-500" />
-                            {item.location}
-                          </span>
-                        )}
-                      </div>
+                      {(item.date || item.location) && (
+                        <div className="flex items-center justify-between text-[11px] text-gray-500 mt-3 pt-2 border-t border-gray-100 font-sans uppercase tracking-wider">
+                          {item.date && (
+                            <span className="flex items-center gap-1">
+                              <Calendar className="w-3 h-3 text-romantic-500" />
+                              {item.date}
+                            </span>
+                          )}
+                          {item.location && (
+                            <span className="flex items-center gap-1">
+                              <MapPin className="w-3 h-3 text-romantic-500" />
+                              {item.location}
+                            </span>
+                          )}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </motion.div>
@@ -145,9 +149,11 @@ export const MemoriesGallery = () => {
 
                       <div className="absolute bottom-4 left-4 right-4 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
                         <div>
-                          <span className="text-xs font-serif text-romantic-300 uppercase tracking-widest">
-                            {item.date} • {item.location}
-                          </span>
+                          {(item.date || item.location) && (
+                            <span className="text-xs font-serif text-romantic-300 uppercase tracking-widest">
+                              {[item.date, item.location].filter(Boolean).join(' • ')}
+                            </span>
+                          )}
                           <h4 className="text-xl sm:text-2xl font-serif font-bold text-white mt-0.5">
                             {item.title}
                           </h4>
@@ -189,9 +195,11 @@ export const MemoriesGallery = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-night-900/90 via-night-900/10 to-transparent" />
 
                     <div className="absolute bottom-4 left-4 right-4">
-                      <div className="text-[11px] uppercase tracking-wider text-romantic-300 font-sans">
-                        {item.date}
-                      </div>
+                      {item.date && (
+                        <div className="text-[11px] uppercase tracking-wider text-romantic-300 font-sans">
+                          {item.date}
+                        </div>
+                      )}
                       <h4 className="text-lg font-serif font-bold text-white mt-1">
                         {item.title}
                       </h4>
@@ -251,9 +259,11 @@ export const MemoriesGallery = () => {
 
               {/* Lightbox Caption */}
               <div className="p-4 sm:p-6 text-center">
-                <span className="text-xs font-serif uppercase tracking-widest text-romantic-400">
-                  {activeMedia.date} {activeMedia.location && `• ${activeMedia.location}`}
-                </span>
+                {(activeMedia.date || activeMedia.location) && (
+                  <span className="text-xs font-serif uppercase tracking-widest text-romantic-400">
+                    {[activeMedia.date, activeMedia.location].filter(Boolean).join(' • ')}
+                  </span>
+                )}
                 <h3 className="text-2xl font-serif font-bold text-white mt-1">
                   {activeMedia.title}
                 </h3>
