@@ -5,25 +5,26 @@ import confetti from 'canvas-confetti';
 
 export const BirthdayLockScreen = ({ onUnlock }) => {
   const [passcode, setPasscode] = useState('');
-  const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const [showHint, setShowHint] = useState(false);
   const [isUnlocked, setIsUnlocked] = useState(false);
+
+  // Target Birthday Midnight: November 11, 2026 at 00:00:00 (Tonight 12:00 AM)
+  const targetMidnight = new Date(2026, 10, 11, 0, 0, 0).getTime();
 
   // Countdown timer to tonight 12:00 AM (midnight)
   const [timeLeft, setTimeLeft] = useState({ hours: '00', minutes: '00', seconds: '00', isReached: false });
 
   useEffect(() => {
     const calculateTime = () => {
-      const now = new Date();
-      // Tonight midnight (12:00 AM of the birthday)
-      const targetMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 24, 0, 0, 0).getTime();
-      const difference = targetMidnight - now.getTime();
+      const now = new Date().getTime();
+      const difference = targetMidnight - now;
 
       if (difference <= 0) {
         setTimeLeft({ hours: '00', minutes: '00', seconds: '00', isReached: true });
       } else {
-        const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((difference / 1000 / 60) % 60);
+        const hours = Math.floor(difference / (1000 * 60 * 60));
+        const minutes = Math.floor((difference / (1000 * 60)) % 60);
         const seconds = Math.floor((difference / 1000) % 60);
 
         setTimeLeft({
@@ -38,14 +39,29 @@ export const BirthdayLockScreen = ({ onUnlock }) => {
     calculateTime();
     const interval = setInterval(calculateTime, 1000);
     return () => clearInterval(interval);
-  }, []);
+  }, [targetMidnight]);
 
   const handleUnlock = (e) => {
     e.preventDefault();
-    if (passcode.trim() === '1506') {
+    const cleanPass = passcode.trim();
+
+    // Developer bypass code so you can preview/test right now without waiting:
+    const isBypass = cleanPass.toLowerCase() === '1506now' || cleanPass.toLowerCase() === '1506open';
+
+    if (cleanPass === '1506' || isBypass) {
+      // Check if midnight has arrived
+      if (!timeLeft.isReached && !isBypass) {
+        // Entered before 12:00 AM midnight
+        setErrorMessage("Thoda sa sabar meri jaan! ⏳ Passcode bilkul sahi hai, par surprise theek raat ke 12:00 AM baje hi unlock hoga. Countdown dekho! ❤️");
+        setTimeout(() => setErrorMessage(''), 5000);
+        return;
+      }
+
+      // Midnight is reached (or developer bypass used)
+      setErrorMessage('');
       setIsUnlocked(true);
       confetti({
-        particleCount: 150,
+        particleCount: 160,
         spread: 90,
         origin: { y: 0.6 },
         colors: ['#ff4d6d', '#ff758f', '#d4af37', '#ffffff']
@@ -54,8 +70,8 @@ export const BirthdayLockScreen = ({ onUnlock }) => {
         onUnlock();
       }, 1000);
     } else {
-      setError(true);
-      setTimeout(() => setError(false), 2000);
+      setErrorMessage("Incorrect passcode. Check the hint below! 💡");
+      setTimeout(() => setErrorMessage(''), 3000);
     }
   };
 
@@ -161,22 +177,22 @@ export const BirthdayLockScreen = ({ onUnlock }) => {
                 onChange={(e) => setPasscode(e.target.value)}
                 placeholder="Enter Passcode..."
                 className={`w-full pl-10 pr-4 py-3 rounded-xl bg-night-900/90 border text-white placeholder-champagne-400/40 text-center text-lg tracking-widest font-mono focus:outline-none transition-all ${
-                  error
-                    ? 'border-red-500 ring-2 ring-red-500/50 animate-shake'
+                  errorMessage
+                    ? 'border-romantic-400 ring-2 ring-romantic-500/50 animate-shake'
                     : 'border-romantic-500/40 focus:border-romantic-400 focus:ring-2 focus:ring-romantic-500/30'
                 }`}
                 autoFocus
               />
             </div>
 
-            {error && (
+            {errorMessage && (
               <motion.div
                 initial={{ opacity: 0, y: -6 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="flex items-center justify-center gap-1.5 text-xs text-red-400 font-sans"
+                className="flex items-center justify-center gap-1.5 text-xs text-romantic-300 font-sans bg-romantic-950/70 border border-romantic-500/30 rounded-lg p-2.5"
               >
-                <AlertCircle className="w-3.5 h-3.5 shrink-0" />
-                <span>Incorrect passcode. Check the hint below!</span>
+                <AlertCircle className="w-4 h-4 shrink-0 text-gold" />
+                <span>{errorMessage}</span>
               </motion.div>
             )}
 
