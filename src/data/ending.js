@@ -13,8 +13,8 @@ export const endingConfig = {
   ],
 
   // Final special portrait or couple picture
-  finalPhoto: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=1200&q=80",
-  finalPhotoCaption: "Here's to a lifetime of sunset walks and holding you close 🌅",
+  finalPhoto: "/images/final-hola-mirror.jpg",
+  finalPhotoCaption: "To my forever person, laughing and capturing memories through every mirror and moment ✨",
 
   // Final Surprise Gift Reveal (e.g. customized gift voucher, heartfelt promise, certificate)
   finalSurprise: {

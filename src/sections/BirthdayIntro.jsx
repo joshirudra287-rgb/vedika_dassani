@@ -113,7 +113,7 @@ export const BirthdayIntro = () => {
 
               <div className="inline-flex items-center gap-2 text-gold text-xs sm:text-sm font-serif italic">
                 <Heart className="w-4 h-4 fill-romantic-500 text-romantic-500" />
-                <span>Happy Birthday To My Favorite Soul</span>
+                <span>Happy Birthday To My Favourite Soul</span>
               </div>
             </div>
           </div>

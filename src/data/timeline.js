@@ -11,35 +11,35 @@ export const timelineConfig = {
       tag: "The First Spark",
       title: "The Day We First Spoke",
       description: "It started with a nervous comment and a shy smile. Neither of us had any idea that 5-minute conversation was the beginning of the most beautiful adventure of our lives.",
-      image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=800&q=80",
+      image: "/images/timeline-mountain-vedika.jpg",
       quote: "“I knew right then that I wanted to know everything about you.”"
     },
     {
       id: 2,
-      date: "",
-      tag: "First Date",
-      title: "Our Very First Official Date",
-      description: "Coffee turned into dinner, dinner turned into a 3-hour walk beneath the city lights. Time stopped completely, and we both pretended we didn't notice the hours slipping away.",
-      image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80",
-      quote: "“Butterflies in my stomach, but pure calm in my heart.”"
+      date: "11 July 2026",
+      tag: "The Whole Day Together",
+      title: "Spending The Entire Day Together",
+      description: "Spending the whole day together from dawn till dark, lost in our own little world. Holding you in my arms as you peacefully fell asleep in the car at night remains one of my most cherished memories.",
+      image: "/images/timeline-car-sleep.jpg",
+      quote: "“Just you and me, letting the hours slip away, wishing the day would never end.”"
     },
     {
       id: 3,
-      date: "",
+      date: "29 September 2024",
       tag: "Official Beginning",
-      title: "The Night We Made It Official",
-      description: "Under the glow of fairy lights, with cold hands and warm hearts, I asked you to be my girlfriend. The way your eyes lit up when you said yes will be etched in my mind forever.",
-      image: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=800&q=80",
-      quote: "“The best decision I have ever made.”"
+      title: "The Day We Made It Official",
+      description: "Under the glow of fairy lights, with cold hands and warm hearts, we asked each other to be together. The way your eyes lit up when you said yes will be etched in my mind forever.",
+      image: "/images/timeline-cafe-salute.jpg",
+      quote: "“The best decision we have ever made.”"
     },
     {
       id: 4,
-      date: "",
-      tag: "First Getaway",
-      title: "Our First Road Trip Together",
-      description: "Singing off-key at the top of our lungs on the highway, getting lost on backroads, and sharing French fries at 11 PM in the hotel room. Pure, effortless joy.",
-      image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80",
-      quote: "“It doesn't matter where the map leads, as long as you're in the passenger seat.”"
+      date: "2 October 2024",
+      tag: "Private Getaway",
+      title: "Our Private Getaway",
+      description: "Private Getaway — A short private escape away from all the noise, completely dedicated to spending quality time together, sharing endless laughs, and creating unforgettable memories.",
+      image: "/images/timeline-night-walk.jpg",
+      quote: "“Escaping the ordinary world, just to hold you close and enjoy our time together.”"
     },
     {
       id: 5,
@@ -47,7 +47,7 @@ export const timelineConfig = {
       tag: "Everlasting",
       title: "Celebrating Another Year of You",
       description: "And here we are today. More in love than yesterday, but not half as much as tomorrow. The future is an unwritten book, and I can't wait to write every page with you.",
-      image: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=800&q=80",
+      image: "/images/timeline-couple-candid.jpg",
       quote: "“To a thousand more chapters together.”"
     }
   ]

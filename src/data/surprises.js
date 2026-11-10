@@ -27,8 +27,8 @@ export const surprisesConfig = {
     description: "I packed something extra intimate inside this mystery gift vault. Enter the secret password to unwrap what is hidden within.",
 
     // The secret passcode (case-insensitive for convenience)
-    password: "love",
-    passwordHint: "💡 Hint: A 4-letter word that describes what I feel for you every single second (starts with L)",
+    password: "2909",
+    passwordHint: "💡 Hint: Day we proposed each other",
 
     // Gift box details
     giftBoxTitle: "Tap The Ribbon To Unlock",
@@ -38,8 +38,8 @@ export const surprisesConfig = {
     secretLetter: {
       salutation: "My Forever Darling,",
       message: "If you unlocked this, you know how much you mean to me. Beyond all the jokes, the gifts, and the celebrations, here is my deepest confession: you made me believe in the absolute beauty of this world again. Every dream I have for the future now has your face in it.",
-      hiddenPhoto: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1000&q=80",
-      hiddenPhotoCaption: "Our secret vow — forever you, forever me 🔒❤️",
+      hiddenPhoto: "/images/secret-kiss-car.jpg",
+      hiddenPhotoCaption: "Our sweet secret moments — forever you, forever me 🔒❤️",
       goldenTicketTitle: "VIP All-Access Pass: A Dream Weekend Away!",
       goldenTicketDesc: "Valid for: 1 Romantic weekend getaway entirely planned by me — fine dining, scenic cabin or beach resort, zero stress, and endless pampering."
     }

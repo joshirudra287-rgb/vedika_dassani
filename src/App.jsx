@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import { AmbientPetals } from './components/AmbientPetals';
 import { FloatingMusicDock } from './components/FloatingMusicDock';
+import { BirthdayLockScreen } from './components/BirthdayLockScreen';
 import { Hero } from './sections/Hero';
 import { BirthdayIntro } from './sections/BirthdayIntro';
 import { PlayfulQuestion } from './sections/PlayfulQuestion';
@@ -14,6 +16,7 @@ import { FinalEnding } from './sections/FinalEnding';
 import { musicConfig } from './data/music';
 
 export function App() {
+  const [isSiteUnlocked, setIsSiteUnlocked] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTrack, setCurrentTrack] = useState(musicConfig.currentTrack);
 
@@ -30,6 +33,13 @@ export function App() {
 
   return (
     <div className="min-h-screen bg-night-900 text-champagne-100 relative selection:bg-romantic-600 selection:text-white">
+      {/* Initial Entry Password Gatekeeper with Midnight Countdown */}
+      <AnimatePresence>
+        {!isSiteUnlocked && (
+          <BirthdayLockScreen onUnlock={() => setIsSiteUnlocked(true)} />
+        )}
+      </AnimatePresence>
+
       {/* Background Floating Petals & Ambient Sparkles */}
       <AmbientPetals />
 

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import { SectionHeader } from '../components/SectionHeader';
 import { endingConfig } from '../data/ending';
-import { Heart, Sparkles, ArrowUp, Gift, Check, Send } from 'lucide-react';
+import { Heart, Sparkles, ArrowUp, Send } from 'lucide-react';
 
 export const FinalEnding = ({ onScrollToTop }) => {
   const [kissCount, setKissCount] = useState(0);
@@ -88,49 +88,6 @@ export const FinalEnding = ({ onScrollToTop }) => {
           </p>
           <p className="font-cursive text-3xl sm:text-4xl text-romantic-400 mt-1">
             {endingConfig.signOffName}
-          </p>
-        </div>
-      </motion.div>
-
-      {/* Final Surprise Gift Reveal: The Birthday Voucher Card */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-        className="max-w-2xl mx-auto mb-16"
-      >
-        <div className="rounded-3xl bg-gradient-to-tr from-night-800 via-romantic-950/80 to-night-900 p-8 sm:p-10 border-2 border-gold/60 shadow-2xl relative overflow-hidden">
-          {/* Top ribbon */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold/20 border border-gold/40 text-gold-light text-xs font-serif uppercase tracking-wider mb-4">
-            <Gift className="w-3.5 h-3.5 text-gold" />
-            <span>{endingConfig.finalSurprise.badge}</span>
-          </div>
-
-          <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white mb-2">
-            <span className="gold-gradient-text">{endingConfig.finalSurprise.title}</span>
-          </h3>
-
-          <div className="inline-block px-3 py-1 rounded bg-night-900/90 border border-gold/30 font-mono text-xs text-gold-light my-2">
-            VOUCHER CODE: {endingConfig.finalSurprise.voucherCode}
-          </div>
-
-          <p className="text-champagne-200/90 text-sm sm:text-base font-light my-4">
-            {endingConfig.finalSurprise.description}
-          </p>
-
-          {/* Perks list */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-left my-6">
-            {endingConfig.finalSurprise.perks.map((perk, i) => (
-              <div key={i} className="flex items-center gap-2 text-xs sm:text-sm text-champagne-100">
-                <Check className="w-4 h-4 text-romantic-400 shrink-0" />
-                <span>{perk}</span>
-              </div>
-            ))}
-          </div>
-
-          <p className="text-[11px] text-romantic-300/60 font-serif italic border-t border-gold/20 pt-3">
-            * {endingConfig.finalSurprise.terms}
           </p>
         </div>
       </motion.div>
